@@ -83,7 +83,9 @@
     (global-name "com.apple.universalaccessAuthWarn")
     ;; Launch Services, Core Services, and icon resolution
     (global-name "com.apple.lsd.mapdb")
-    (global-name "com.apple.lsd.modifydb")
+    ;; com.apple.lsd.modifydb is intentionally NOT granted: it lets a sandboxed process
+    ;; persistently rewrite default file-type/URL-scheme handlers (LSSetDefault*), which
+    ;; can route a later user double-click to an unsandboxed app. Opt in via launch-services.
     (global-name "com.apple.lsd.advertisingidentifiers")
     (global-name "com.apple.iconservices")
     (global-name "com.apple.coreservices.appleevents")

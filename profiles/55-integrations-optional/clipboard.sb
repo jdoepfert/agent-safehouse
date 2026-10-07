@@ -7,7 +7,8 @@
 (allow mach-lookup
     (global-name "com.apple.pasteboard.1")                               ;; Pasteboard service used by pbcopy/pbpaste.
     (global-name "com.apple.lsd.mapdb")                                  ;; Launch Services type lookups required by pbcopy.
-    (global-name "com.apple.lsd.modifydb")
+    ;; com.apple.lsd.modifydb is intentionally NOT granted (pbcopy/pbpaste work without it);
+    ;; it allows persistent default-handler rewrites outside the sandbox.
 )
 
 ;; Don't actually need these for clipboarding (I think)

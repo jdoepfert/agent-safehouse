@@ -76,7 +76,7 @@
     (global-name "com.apple.fonts")
     (global-name "com.apple.FontObjectsServer")
     (global-name "com.apple.lsd.mapdb")
-    (global-name "com.apple.lsd.modifydb")
+    ;; com.apple.lsd.modifydb intentionally omitted; see macos-gui.sb.
     (global-name "com.apple.iconservices")
     (global-name "com.apple.coreservices.appleevents")
     (global-name "com.apple.coreservices.sharedfilelistd.xpc")
